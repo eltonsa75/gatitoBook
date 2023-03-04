@@ -3,6 +3,9 @@
 <form class="form mt-4" [formGroup]="novoUsuarioForm" (submit)="cadastrar()">
   <div class="form-group">
     <input placeholder="e-mail" class="form-control" formControlName="email"/>
+    <app-mensagem
+    *ngIf="novoUsuarioForm.get('email')"
+    mensagem="Email obrigatório"></app-mensagem>
   </div>
 
   <div class="form-group">
